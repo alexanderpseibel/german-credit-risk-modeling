@@ -1,0 +1,2 @@
+Model,Target recall,Threshold,Recall,Precision,F1,TP,FP,FN,TN,Cost_5to1,Cost_10to1,TargetRecallNum,Policy
+XGBoost,0.8,0.1685,0.8,0.4651162790697674,0.5882352941176471,60,69,15,106,144.0,219.0,0.8,Recall target 80% (example)
