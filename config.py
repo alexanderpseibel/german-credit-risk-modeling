@@ -1,5 +1,3 @@
-# config.py
-
 COLUMN_RENAME_MAP = {
     "laufkont": "status",
     "laufzeit": "duration",

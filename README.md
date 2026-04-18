@@ -14,11 +14,11 @@ I developed a comparative modeling framework using the South German Credit datas
 * **Random Forest:** An ensemble approach used to capture non-linear borrower behavior.
 * **XGBoost:** A gradient boosting implementation representing high structural flexibility in capturing higher-order interactions.
 
-### Advanced Evaluation Design
-Unlike standard data science projects, this analysis evaluates risk through an institutional and regulatory lens:
-* **Discrimination:** Using ROC-AUC and PR-AUC to rank borrower risk independent of specific approval thresholds.
-* **Cost-Based Optimization:** Analyzing asymmetric loss where missing a default is more expensive than rejecting a solvent borrower, using 5:1 and 10:1 cost ratios.
-* **Probability Calibration:** Using Brier Scores and Reliability Diagrams to ensure predicted probabilities match real-world default frequencies.
+### Evaluation Design
+Models are evaluated across three dimensions:
+* **Discrimination:** ROC-AUC and PR-AUC measure ranking quality independent of any specific decision threshold.
+* **Cost-based optimization:** Asymmetric loss functions (5:1 and 10:1 FN:FP ratios) determine cost-optimal thresholds, reflecting that missing a default is more costly than rejecting a solvent borrower.
+* **Probability calibration:** Brier scores and reliability diagrams verify that predicted PDs match observed default frequencies — a requirement under Basel IRB and IFRS 9.
 
 ## Key Findings
 * **Performance:** Tree-based models achieved higher discrimination (Random Forest ROC-AUC 0.777) compared to Logistic Regression (0.756).
